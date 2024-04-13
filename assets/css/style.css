@@ -1463,6 +1463,28 @@ section {
 
 }
 
+.donasi .icon-donasi{
+  padding: 10px 10px;
+  border-radius: 16px;
+  border-style: groove;
+  border-color: black;
+  text-align: center;
+}
+
+.donasi .icon-donasi h3{
+  color: #18d26e;
+  font-size: medium;
+}
+
+.donasi .icon-donasi:hover{
+  background: #18d26e;  
+  /* font-size: medium; */
+}
+.donasi .icon-donasi:hover a h3{
+  color: white;
+  font-size: medium;
+}
+
 .donasi .member .social {
   margin-top: 15px;
   gap: 1;
