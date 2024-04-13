@@ -864,6 +864,11 @@ section {
 /*--------------------------------------------------------------
 # Our Clients
 --------------------------------------------------------------*/
+.clients{
+  padding: 40px 30px;
+  background: #fff;
+  margin-bottom: 40px;
+}
 .clients .swiper-pagination {
   margin-top: 20px;
   position: relative;
