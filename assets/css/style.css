@@ -702,16 +702,7 @@ section {
   margin-bottom: 10px;
 }
 .featured .donasi a {
-  /* line-height: 20px; */
-  border-radius: 20px;
-  background-color: #18d26e;
-  padding: 10px 10px;
-  display: inline;
-  /* gap: 2px; */
-  color: white;
-}
-.featured .donasi:hover a {
-  /* line-height: 20px; */
+  line-height: 20px;
   border-radius: 20px;
   background-color: white;
   padding: 10px 10px;
@@ -719,17 +710,16 @@ section {
   /* gap: 2px; */
   color: black;
 }
-
-.featured .icon-box:hover {
-  padding-top: 10px;
-  background: #18d26e;
+.featured .donasi:hover a {
+  /* line-height: 20px; */
+  border-radius: 20px;
+  background-color: #18d26e;
+  padding: 10px 10px;
+  display: inline;
+  /* gap: 2px; */
+  color: black;
 }
 
-.featured .icon-box:hover i,
-.featured .icon-box:hover h3 a,
-.featured .icon-box:hover p {
-  color: #fff;
-}
 
 /*--------------------------------------------------------------
 # About
