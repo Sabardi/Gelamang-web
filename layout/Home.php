@@ -1,3 +1,4 @@
+
   <!-- ======= Hero Section ======= -->
   <section id="hero">
     <div class="hero-container">
@@ -183,19 +184,21 @@
           <h2>Berita Terbaru</h2>
           <!-- <p>"Saat kita berbagi, kita memberi lebih dari sekadar bantuan. Kita memberikan harapan, keberanian, dan keyakinan kepada mereka yang membutuhkan. Jadilah bagian dari perubahan dengan memberikan sumbangan Anda."</p> -->
         </div>
-  
+
         <div class="row">
+      <?php
+      include "koneksi.php";
+      $query = "select *from produk LIMIT 3";
+      $sql = mysqli_query($connect, $query);
+      while ($data = mysqli_fetch_array($sql)) {
+      ?>  
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch rounded">
-            <div class="member"><a href="try.html">
-              <img src="assets/img/sharebook.jpg" alt="">
-              <h3>SHARE THE LOVE</h3>              
+          <div class="member"><a href="">
+              <img src="assets/img/<?= $data["foto1"] ?>" alt="">
+              <h3><?= $data["judul"] ?></h3>              
             </a>
-            <p>"SHARE THE LOVE 💖"  
-              Mari kita berbagi buku untuk anak-anak di Lombok, membantu memperluas wawasan mereka dan menginspirasi minat baca yang lebih besar.
-              'Pringgabaya Gelamang' telah terhubung dengan banyak anak di pelosok desa, dan setiap bulan kami bertemu dengan mereka untuk belajar dan bermain bersama.
-              'Pringgabaya Gelamang' telah mendirikan 'Bale Belajar Anak Kampung' (BABEAK) di Desa Pringgabaya, tepatnya di Dusun Dasan Bantek. Ini akan menjadi pusat belajar bagi anak-anak di sekitarnya.
-              Jika Anda ingin membantu, silakan hubungi kami dan bergabunglah dalam gerakan ini. <a href="https://www.instagram.com/tv/B-YeXd6pOb1/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==">Detail Kegiatan</a> Matur tampi asih semeton... 🙏"                  
-            </p>   
+            <p><?= $data["artikel"] ?></p>
+            <p><?= $data["opening"] ?></p>
             <div class="social">
               <a href=""><i class="bi bi-twitter"></i></a>
               <a href=""><i class="bi bi-facebook"></i></a>
@@ -204,50 +207,7 @@
             </div>
             </div>
           </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch rounded">
-            <div class="member"><a href="try.html">
-              <img src="assets/img/sharebook.jpg" alt="">
-              <h3>SHARE THE LOVE</h3>              
-            </a>
-            <p>"SHARE THE LOVE 💖"  
-              Mari kita berbagi buku untuk anak-anak di Lombok, membantu memperluas wawasan mereka dan menginspirasi minat baca yang lebih besar.
-              'Pringgabaya Gelamang' telah terhubung dengan banyak anak di pelosok desa, dan setiap bulan kami bertemu dengan mereka untuk belajar dan bermain bersama.
-              'Pringgabaya Gelamang' telah mendirikan 'Bale Belajar Anak Kampung' (BABEAK) di Desa Pringgabaya, tepatnya di Dusun Dasan Bantek. Ini akan menjadi pusat belajar bagi anak-anak di sekitarnya.
-              Jika Anda ingin membantu, silakan hubungi kami dan bergabunglah dalam gerakan ini. <a href="https://www.instagram.com/tv/B-YeXd6pOb1/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==">Detail Kegiatan</a> Matur tampi asih semeton... 🙏"                  
-            </p>  
-            
-            <div class="social">
-              <a href=""><i class="bi bi-twitter"></i></a>
-              <a href=""><i class="bi bi-facebook"></i></a>
-              <a href=""><i class="bi bi-instagram"></i></a>
-              <a href=""><i class="bi bi-linkedin"></i></a>
-            </div>
-
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch rounded">
-            <div class="member"><a href="try.html">
-              <img src="assets/img/sharebook.jpg" alt="">
-              <h3>SHARE THE LOVE</h3>              
-            </a>
-            <p>"SHARE THE LOVE 💖"  
-              Mari kita berbagi buku untuk anak-anak di Lombok, membantu memperluas wawasan mereka dan menginspirasi minat baca yang lebih besar.
-              'Pringgabaya Gelamang' telah terhubung dengan banyak anak di pelosok desa, dan setiap bulan kami bertemu dengan mereka untuk belajar dan bermain bersama.
-              'Pringgabaya Gelamang' telah mendirikan 'Bale Belajar Anak Kampung' (BABEAK) di Desa Pringgabaya, tepatnya di Dusun Dasan Bantek. Ini akan menjadi pusat belajar bagi anak-anak di sekitarnya.
-              Jika Anda ingin membantu, silakan hubungi kami dan bergabunglah dalam gerakan ini. <a href="https://www.instagram.com/tv/B-YeXd6pOb1/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==">Detail Kegiatan</a> Matur tampi asih semeton... 🙏"                  
-            </p>   
-            <div class="social">
-              <a href=""><i class="bi bi-twitter"></i></a>
-              <a href=""><i class="bi bi-facebook"></i></a>
-              <a href=""><i class="bi bi-instagram"></i></a>
-              <a href=""><i class="bi bi-linkedin"></i></a>
-            </div>
-
-            </div>
-          </div>
-        </div>
+<?php } ?>
   
       </div>
     </section>
